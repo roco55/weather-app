@@ -1,8 +1,19 @@
 .wrapper {
-    
+    display: flex;
     background-image: url(/images/day.jpg);
     background-size: contain;
     margin-bottom: 70px;
+    width: 100%;
+    justify-content: center;
+
+}
+
+
+@media screen and (max-width:864px) {
+    .wrapper {
+        background-size:cover;
+        background-position-x:center;
+    }
 }
 
 .contentWrapper{
@@ -12,9 +23,22 @@
     padding-top: 30px;
     display: flex;
     max-width: 600px;
+    width: 100%;
     height: 426px;
     gap: 50px;
-    margin: 0 auto;
+    position: relative;
+}
+
+@media screen and (max-width:632px) {
+    .contentWrapper{
+        margin: 0px 16px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .contentWrapper{
+        margin: 110px 16px;
+    }
 }
 
 .searchBar{
@@ -45,11 +69,56 @@
     position: absolute;
     right: 10px;
     border: none;
+    cursor: pointer;
 }
+
+.weatherFindResponce{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    gap: 8px;
+    position: absolute;
+    top:100px ;
+    box-shadow: 0px 5px 10px 0px #2121211A;
+
+}
+
+.weatherFindResponce button{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    background-color: #ffffff;
+    padding: 6px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.weatherFindResponce button:hover{
+    background-color: #90CAF9;
+    color: #ffffff;
+}
+
+.weatherFindResponce span{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #9E9E9E;
+}   
+
 
 .weatherDetails{
     width: 100%;
-    height: 236px;
+    
     border-radius: 30px;
     background: #FFFFFFD9;
     padding: 20px;
@@ -78,17 +147,38 @@
 
 .cardHeader{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+@media screen and (max-width:450px){
+    .cardHeader{
+        flex-direction: column;
+        justify-content: space-between;
+        gap:20px;
+    }
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: row;
+}
 
 .weatherIcon{
-    min-width: 100px;
+    background: #ffffff;
+    border-radius: 30px;
 }
 
 .dataWrapper{
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+@media screen and (max-width:450px){
+    .dataWrapper{
+        flex-direction: column;
+    }
 }
 
 .weatherDetails hr{
@@ -104,10 +194,22 @@
     margin-left: 20px;
 }
 
+.currentWeather span::first-letter{
+    text-transform: capitalize;
+}
+
 .cityAndDate{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: right;
+}
+
+@media screen and (max-width:450px){
+    .cityAndDate{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .cardFooter{
@@ -115,6 +217,7 @@
     height:100%;
     max-height: 90px;
     align-items: center;
+    padding-bottom:10px;
 }
 
 .tempMin{

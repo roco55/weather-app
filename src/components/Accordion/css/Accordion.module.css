@@ -1,0 +1,39 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 1050px;
+  width: 100%;
+    
+}
+
+
+.question{
+  display: flex;
+  height: 54px;
+  border-radius: 30px;
+  background:#FAFAFA;
+  align-items: center;
+  padding: 15px 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.answer{
+  display: flex;
+  border-radius: 30px;
+  background:#FAFAFA;
+  align-items: center;
+  padding: 15px 20px;
+
+}
+
+.open {
+  transform: rotate(180deg); 
+  transition: transform 0.3s ease; 
+}
+
+.close {    
+  transform: rotate(0deg); 
+  transition: transform 0.3s ease; 
+}

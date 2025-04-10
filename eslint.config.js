@@ -26,7 +26,7 @@ export default tseslint.config(
       ],
       semi: ["error", "always"],
       "eol-last": ["warn", "always"],
-      quotes: ["error", "double", { allowTemplateLiterals: true }],
+      quotes: ["error", "single", { allowTemplateLiterals: true }],
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": [
         "warn",

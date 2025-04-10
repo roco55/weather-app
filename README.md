@@ -1,6 +1,6 @@
 # To run the project:
   1. Clone the repository using next console command:
-    git clone https://github.com/roco55/TestTask-GlobalDevGroup
+    git clone https://github.com/roco55/weather-app
   2. Navigate to the project repository using next console command:
     cd TestTask-GlobalDevGroup
   3. install dependencies used in the project using next console command:
